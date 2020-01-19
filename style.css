@@ -40,6 +40,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Cutom CSS
+	## Header
+	## Main
+	## Footer
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -982,4 +986,23 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+# Custom CSS
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+.flex-container {
+  display: flex;
+	flex-wrap: wrap;
+}
+
+#header-left {
+	flex: 30%;
+}
+
+#header-right {
+	flex: 70%;
 }
