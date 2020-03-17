@@ -28,29 +28,35 @@
 
 		<div class="flex-container">
 
-			<div id="header-left">
-				<div id="header-social">
-					<a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
-					<a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
-					<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-				</div><!-- #header-social -->
-			</div><!-- .header-left -->
+			<div id="header-top">
 
-			<div id="header-right">
-				<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wwc' ); ?></button>
-					<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					) );
-					?>
-				</nav><!-- #site-navigation -->
-			</div><!-- .header-right -->
+				<div id="header-left">
+					<div id="header-logo">
+						<a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="logo" width="400"></a>
+					</div><!-- #header-logo -->
+				</div><!-- .header-left -->
+
+				<div id="header-right">
+					<nav id="site-navigation" class="main-navigation">
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wwc' ); ?></button>
+						<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						) );
+						?>
+					</nav><!-- #site-navigation -->
+				</div><!-- .header-right -->
+
+			</div><!-- .header-top -->
+
+			<div id="header-bottom">
+
+			</div><!-- .header-bottom -->
 
 		</div><!-- .flex-container -->
 
-		<div class="site-branding">
+		<!-- <div class="site-branding">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :

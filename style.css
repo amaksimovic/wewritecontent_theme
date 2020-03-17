@@ -9,16 +9,58 @@ License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: wwc
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
-
 wwc is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
-
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+
+/* @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=latin-ext'); */
+
+@font-face {
+	font-family: 'Nunito Sans', sans-serif;
+	src: url(fonts/NunitoSans-Regular.ttf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Nunito Sans', sans-serif;
+	src: url(fonts/NunitoSans-Bold.ttf);
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Nunito Sans', sans-serif;
+	src: url(fonts/NunitoSans-SemiBold.ttf);
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'Nunito Sans', sans-serif;
+	src: url(fonts/NunitoSans-ExtraBold.ttf);
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: 'Nunito Sans', sans-serif;
+	src: url(fonts/NunitoSans-Black.ttf);
+	font-weight: 900;
+}
+
+@font-face {
+	font-family: 'Nunito Sans', sans-serif;
+	src: url(fonts/NunitoSans-Light.ttf);
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Nunito Sans', sans-serif;
+	src: url(fonts/NunitoSans-ExtraLight.ttf);
+	font-weight: 200;
+}
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -399,8 +441,8 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
-	font-family: sans-serif;
+	color: #333;
+	font-family: 'Nunito Sans', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -659,16 +701,12 @@ a:hover, a:active {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
-	right: 70px; /* novo */
-	/* top: 100%; */
-	top: 0; /* novo */
-	/* left: -999em; */
-	/* z-index: 99999; */
-	z-index: 500;
-	/* display: none; /* novo */ */
-	visibility: collapse;
-	opacity: 0;
-  transition: visibility 0s, opacity 0.2s linear;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+	visibility: collapse; /* novo */
+	opacity: 0; /* novo */
+	transition: visibility 0s, opacity 0.2s linear; /* novo */
 }
 
 .main-navigation ul ul ul {
@@ -683,21 +721,19 @@ a:hover, a:active {
 
 .main-navigation ul ul a {
 	width: 200px;
-	text-align: right; /* novo */
 }
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
 	left: auto;
-	/* display: block; /* novo */ */
-	z-index: 300; /* novo */
-	visibility: visible;
-  opacity: 1;
+	visibility: visible; /* novo */
+  opacity: 1; /* novo */
 }
 
 .main-navigation li {
-	/* float: left; */
+	float: left;
 	position: relative;
+	padding-left: 20px; /* novo */
 }
 
 .main-navigation a {
@@ -1007,9 +1043,27 @@ object {
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
+header {
+	background-image: url(img/header-background.jpeg);
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.95;
+}
+
 .flex-container {
   display: flex;
 	flex-wrap: wrap;
+}
+
+#header-top {
+	background-color: #FFF;
+	opacity: 0.5;
+	height: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	flex: 20%;
 }
 
 #header-left {
@@ -1018,4 +1072,20 @@ object {
 
 #header-right {
 	flex: 70%;
+}
+
+#header-bottom {
+	flex: 80%;
+}
+
+.main-navigation {
+	padding: 50px 350px 0 0;  	/*novo*/
+	text-transform: uppercase;  /*novo*/
+}
+
+.main-navigation a:link,
+.main-navigation a:visited {
+	color: #333;
+	font-weight: 600;
+	font-size: 20px;
 }
