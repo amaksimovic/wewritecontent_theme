@@ -26,17 +26,17 @@
 
 	<header id="masthead" class="site-header">
 
-		<div class="flex-container">
+		<!-- <div class="flex-container"> -->
 
-			<div id="header-top">
+			<div id="header-top" class="flex-container">
 
-				<div id="header-left">
+				<div id="header-left" class="flex-container">
 					<div id="header-logo">
-						<a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="logo" width="400"></a>
+						<a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="logo"></a>
 					</div><!-- #header-logo -->
 				</div><!-- .header-left -->
 
-				<div id="header-right">
+				<div id="header-right" class="flex-container">
 					<nav id="site-navigation" class="main-navigation">
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wwc' ); ?></button>
 						<?php
@@ -50,11 +50,12 @@
 
 			</div><!-- .header-top -->
 
-			<div id="header-bottom">
+			<div id="header-bottom" class="flex-container">
 
 			</div><!-- .header-bottom -->
 
-		</div><!-- .flex-container -->
+		<!-- </div> -->
+		<!-- .flex-container -->
 
 		<!-- <div class="site-branding">
 			<?php

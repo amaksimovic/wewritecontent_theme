@@ -445,7 +445,7 @@ textarea {
 	font-family: 'Nunito Sans', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.5;
+	/* line-height: 1.5; */ /*novo*/
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -686,12 +686,12 @@ a:hover, a:active {
 	clear: both;
 	display: block;
 	float: left;
-	width: 100%;
+	/* width: 100%; */
 }
 
 .main-navigation ul {
 	display: none;
-	float: right; /* novo */
+	/* float: right; /* novo */
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
@@ -1049,7 +1049,7 @@ header {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	opacity: 0.95;
+	/* opacity: 0.95; */
 }
 
 .flex-container {
@@ -1058,34 +1058,47 @@ header {
 }
 
 #header-top {
-	background-color: #FFF;
-	opacity: 0.5;
-	height: 100px;
-	display: flex;
-	flex-wrap: wrap;
-	flex: 20%;
+	background-color: rgba(255,255,255,0.8);
+	/* background-color: #FFF;
+	opacity: 0.5; */
+	/* height: 100px; */
+	/* flex: 40%; */
 }
 
 #header-left {
-	flex: 30%;
+	flex: 40%;
+}
+
+#header-logo {
+	/* position: relative; */
+	margin-left: 5em;
+}
+
+#header-logo img{
+	/* height: 60px; */
+	width: 250px;
+	margin: 0.5em;
+	opacity: 1;
 }
 
 #header-right {
-	flex: 70%;
+	flex: 60%;
 }
 
 #header-bottom {
-	flex: 80%;
+	/* flex: 60%; */
 }
 
 .main-navigation {
-	padding: 50px 350px 0 0;  	/*novo*/
+	padding: 2.3em 1.7em 0.7em 1.5em;  	/*novo*/
 	text-transform: uppercase;  /*novo*/
+	margin-right: 5em;
 }
 
 .main-navigation a:link,
 .main-navigation a:visited {
 	color: #333;
-	font-weight: 600;
-	font-size: 20px;
+	font-weight: 700;
+	font-size: 16px;
+	padding-left: 0.5em;
 }
