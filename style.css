@@ -733,7 +733,6 @@ a:hover, a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
-	padding-left: 20px; /* novo */
 }
 
 .main-navigation a {
@@ -1043,12 +1042,13 @@ object {
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
-header {
-	background-image: url(img/header-background.jpeg);
+#masthead {
+	background-image: url(img/header-background-01.jpeg);
 	height: 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	position: relative;
 	/* opacity: 0.95; */
 }
 
@@ -1058,9 +1058,7 @@ header {
 }
 
 #header-top {
-	background-color: rgba(255,255,255,0.8);
-	/* background-color: #FFF;
-	opacity: 0.5; */
+	background-color: rgba(255,255,255,0.5);
 	/* height: 100px; */
 	/* flex: 40%; */
 }
@@ -1085,20 +1083,75 @@ header {
 	flex: 60%;
 }
 
-#header-bottom {
-	/* flex: 60%; */
-}
-
 .main-navigation {
-	padding: 2.3em 1.7em 0.7em 1.5em;  	/*novo*/
+	padding: 1.8em 1em 0.5em 1em;  	/*novo*/
 	text-transform: uppercase;  /*novo*/
 	margin-right: 5em;
+}
+
+.main-navigation li {
+	padding-right: 20px;
+}
+
+.main-navigation a {
+	/* text-shadow: 0px 0.3px 1px #999; */
+	text-shadow: 0px 1px 2px rgba(51,51,51,0.15);
+	letter-spacing: 0.8px;
 }
 
 .main-navigation a:link,
 .main-navigation a:visited {
 	color: #333;
-	font-weight: 700;
+	font-weight: 600;
 	font-size: 16px;
-	padding-left: 0.5em;
+	padding: 5px;
+}
+
+#header-social {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+#header-social img {
+	width: 18px;
+	margin: 2.5px;
+	opacity: 0.9;
+}
+
+.img-row {
+	flex: 25%;
+}
+
+#menu-item-44 a {
+	background: transparent;
+	border: 1px solid #333;
+	margin-top: -1px;
+	border-radius: 15px;
+	/* box-shadow: 0px 0.3px 1px #999; */
+	box-shadow: 0px 1px 2px rgba(51,51,51,0.15);
+}
+
+#header-bottom {
+	/* flex: 60% */
+}
+
+#header-call-to-action {
+	margin: 0 auto;
+	width: 50%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 50px;
+	background: #FFF;
+	background-color: rgba(255,255,255,0.35);
+}
+
+#header-call-to-action h2 {
+	font-size: 40px;
+	font-weight: 800;
+	color: #F15A24;
+	text-shadow: 0 1px 2px rgba(241,90,36,0.15);
 }
