@@ -57,7 +57,7 @@
 
 					<h2>We can help you reach your full potential</h2>
 					<p>Just give us a call and we’ll do the rest.</p>
-					<p>START NOW</p>
+					<span class="btn-orange">START NOW</span>
 
 				</div><!-- #header-call-to-action -->
 
