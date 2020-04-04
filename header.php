@@ -51,17 +51,17 @@
 				</div><!-- #header-right -->
 			</div><!-- #header-top -->
 
-			<div id="header-bottom" class="flex-container">
+			<!-- <div id="header-bottom" class="flex-container">
 
 				<div id="header-call-to-action">
 
 					<h2>We can help you reach your full potential</h2>
 					<p>Just give us a call and we’ll do the rest.</p>
-					<span class="btn-orange">START NOW</span>
+					<a href="#"><span class="btn-orange">START NOW</span></a>
 
 				</div><!-- #header-call-to-action -->
 
-			</div><!-- #header-bottom -->
+			</div><!-- #header-bottom --> 
 
 		<!-- <div class="site-branding">
 			<?php
